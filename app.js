@@ -16,6 +16,8 @@ app.post("/",upload.single("data"),function(req,res){
 	res.json({"size":req.file.size});
 })
 
-app.listen(3000,()=>{
+var port = process.env.PORT || 3000;
+
+app.listen(port,()=>{
 	console.log("on air");
 })
